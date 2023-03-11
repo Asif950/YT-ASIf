@@ -24,6 +24,8 @@ git clone https://github.com/Asif950/YT-ASIf
 
 cd YT-ASIf
 
+git pull
+
 python Asif.py
 
 👉👉HELP BY MAHDI HASAN SHUVO
